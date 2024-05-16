@@ -1,0 +1,808 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: josefinSans;
+  src: url("../josefinSans/JosefinSans-Bold.ttf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*phone styles*/
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+.darkTheme {
+  --primary-color: black;
+  --secondary-color: white;
+}
+.darkTheme .offcanvas {
+  background: black;
+}
+.darkTheme .offcanvas a {
+  color: white !important;
+}
+
+.lightTheme {
+  --primary-color: black;
+  --secondary-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--secondary-color);
+  font-family: "Josefin", sans-serif;
+}
+
+.mobileNavbar .navbar {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.pcNavbar {
+  display: none;
+}
+
+#dark {
+  height: 2rem;
+}
+
+#light {
+  height: 2rem;
+}
+
+.banner {
+  padding: 3rem 0;
+  background: var(--primary-color);
+}
+.banner .left {
+  background: var(--primary-color);
+  background: transparent;
+  padding: 10px;
+  padding-top: 4rem;
+  gap: 100px;
+}
+.banner .left .text {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+.banner .left .buttons {
+  display: flex;
+  gap: 20px;
+  margin: 2vh 0;
+}
+.banner .left .buttons .btn-discover {
+  background: rgb(128, 34, 140);
+  padding: 5px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+}
+.banner .left .buttons .btn-discover a {
+  background: none;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 15px;
+}
+.banner .left .buttons .btn-book {
+  background: transparent;
+  border: 3px solid rgb(128, 34, 140);
+  padding: 5px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+}
+.banner .left .buttons .btn-book a {
+  background: none;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 15px;
+}
+.banner .left .link {
+  margin: 2vh 0;
+}
+.banner .left .link .text {
+  background: transparent;
+  gap: 10px;
+}
+.banner .left .link .text img {
+  width: 25px;
+  height: auto;
+  background: none;
+  padding-bottom: 0px;
+}
+.banner .left .link .text p {
+  background: none;
+}
+.banner .right {
+  display: flex;
+}
+.banner .right img {
+  width: 24%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 3px;
+}
+.banner .right .image1 {
+  margin-top: 50px;
+}
+
+.about {
+  background: var(--primary-color);
+}
+.about .left .text {
+  width: 100%;
+}
+.about .left .images {
+  display: flex;
+}
+.about .left .images img {
+  height: 14rem;
+}
+.about .left .images .none {
+  display: none;
+}
+.about .right {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about .right .image {
+  background: dimgray;
+  background-image: url("../image/image 7.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .right .image img {
+  height: 2rem;
+}
+.about .right .btn {
+  background: #80228C;
+  width: 9rem;
+  border-radius: 0;
+  padding: 4px 7px;
+}
+.about .right .btn a {
+  text-decoration: none;
+  color: var(--primary-color);
+  background: transparent;
+  font-weight: 700;
+}
+
+.services {
+  background: var(--primary-color);
+  padding: 3rem 0;
+}
+.services .below {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.services .below .box {
+  width: 22rem;
+  height: 30rem;
+}
+.services .below .sides {
+  background: dimgray;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.services .below .sides .word {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  height: -moz-min-content;
+  height: min-content;
+  background: transparent;
+}
+.services .below .sides .word p {
+  font-weight: 600;
+  background: transparent;
+  color: white;
+}
+.services .below .sides .word img {
+  background: transparent;
+}
+.services .below .image1 {
+  background-image: url("../image/image8.jpg");
+}
+.services .below .image2 {
+  background-image: url("../image/image9.jpg");
+}
+.services .below .center {
+  background: #80228C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.services .below .center ol {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  list-style: decimal;
+  gap: 5px;
+  background: transparent;
+}
+.services .below .center ol li {
+  font-size: 20px;
+  background: transparent;
+  color: white;
+}
+.services .below .center .head {
+  width: 69%;
+  background: transparent;
+}
+.services .below .center .head p {
+  font-size: 20px;
+  color: white;
+  background: transparent;
+}
+.services .below .center .cancel {
+  width: 100%;
+  margin-bottom: -48px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background: transparent;
+}
+.services .below .center .cancel img {
+  background: transparent;
+}
+
+.testimonials {
+  background: var(--primary-color);
+  padding: 3rem 0;
+}
+.testimonials .container .row .name {
+  font-weight: 700;
+}
+.testimonials .container .row .left .testimony img {
+  width: 100%;
+}
+.testimonials .container .row .right {
+  margin-top: 1rem;
+}
+.testimonials .container .row .right .inRight img {
+  width: 100%;
+}
+
+.instagram {
+  text-align: center;
+  background: var(--primary-color);
+  padding: 3rem 0;
+}
+.instagram .container .hide {
+  display: none;
+}
+.instagram .container .images {
+  display: flex;
+  gap: 5px;
+}
+.instagram .container .images img {
+  height: 16rem;
+  width: 10rem;
+}
+.instagram .container .images .down {
+  margin-top: 2rem;
+}
+.instagram .container h6 {
+  margin-bottom: 14px;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #000;
+}
+.instagram .container .btn {
+  background: #80228C;
+  width: 8rem;
+  border-radius: 0;
+}
+.instagram .container .btn a {
+  text-decoration: none;
+  color: var(--primary-color);
+  background: transparent;
+  font-weight: 700;
+}
+
+#mobileFooter {
+  padding: 1rem 0;
+  background: #80228C;
+}
+#mobileFooter .container .p {
+  font-weight: 700;
+  color: white;
+  text-decoration: underline;
+}
+#mobileFooter .container .links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#mobileFooter .container .links a {
+  text-decoration: none;
+  color: white;
+}
+#mobileFooter .container .top {
+  padding-bottom: 2rem;
+}
+#mobileFooter .container .top .left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#mobileFooter .container .top .left .logo {
+  height: 2rem;
+  width: 5rem;
+}
+#mobileFooter .container .top .left .text p {
+  color: white;
+}
+#mobileFooter .container .top .left .text img {
+  height: 1rem;
+}
+#mobileFooter .container .top .left .icons {
+  display: flex;
+  gap: 7px;
+}
+#mobileFooter .container .top .left .icons img {
+  height: 2rem;
+}
+#mobileFooter .container .below .right {
+  overflow-x: hidden;
+}
+#mobileFooter .container .below .right .touch .information {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+#mobileFooter .container .below .right .touch .information img {
+  height: 25px;
+}
+#mobileFooter .container .below .right .touch .information p {
+  color: white;
+  padding-top: 14px;
+}
+
+.pcFooter {
+  display: none;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .mobileNavbar {
+    display: none;
+  }
+  .pcNavbar {
+    display: block;
+    background: var(--primary-color);
+  }
+  .pcNavbar .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pcNavbar .container .logo {
+    height: 5rem;
+  }
+  .pcNavbar .container .right {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 14px;
+  }
+  .pcNavbar .container .right .links {
+    display: flex;
+    gap: 15px;
+  }
+  .pcNavbar .container .right .links a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  .pcNavbar .container .right .links a span {
+    color: #80228C;
+  }
+  .banner .left {
+    padding-top: 0rem;
+  }
+  .banner .left .link .text {
+    display: flex;
+    align-items: center;
+  }
+  .banner .left .link .text img {
+    padding-bottom: 18px;
+  }
+  .banner .right {
+    display: flex;
+    gap: 5px;
+  }
+  .banner .right img {
+    height: 30vh;
+  }
+  .banner .right .image1 {
+    margin-top: 7vh;
+  }
+  .about .left {
+    padding-left: 3rem;
+  }
+  .about .left .text {
+    width: 80%;
+  }
+  .about .left .images {
+    display: flex;
+  }
+  .about .left .images img {
+    height: 11rem;
+  }
+  .about .left .images .image1 {
+    margin-top: 3rem;
+  }
+  .about .left .images .none {
+    display: block;
+  }
+  .about .right {
+    margin-top: 0rem;
+    gap: 17px;
+  }
+  .services .below {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .services .below .box {
+    width: 14rem;
+    height: 26rem;
+  }
+  .services .below .center ol li {
+    font-size: 14px;
+  }
+  .services .below .center .head p {
+    font-size: 14px;
+  }
+  .services .below .center .cancel {
+    width: 100%;
+    margin-bottom: -48px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    background: transparent;
+  }
+  .services .below .center .cancel img {
+    background: transparent;
+  }
+  .testimonials .container .row .left .testimony img {
+    height: 16rem;
+  }
+  .testimonials .container .row .left .testimony .text {
+    width: 66%;
+  }
+  .testimonials .container .row .right .inRight img {
+    height: 14rem;
+  }
+  .testimonials .container .row .right .inRight .text {
+    width: 95%;
+  }
+  .instagram .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .instagram .gallery .images {
+    gap: 10px;
+  }
+  .instagram .gallery .images img {
+    height: 22rem;
+  }
+  .instagram .gallery .images .show {
+    display: block;
+  }
+  .instagram .gallery .images .low {
+    margin-top: 5rem;
+  }
+  #mobileFooter {
+    display: none;
+  }
+  .pcFooter {
+    display: block;
+    background: #80228C;
+    padding: 1rem 2rem;
+  }
+  .pcFooter .p {
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  .pcFooter .row a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-bottom: 7px;
+  }
+  .pcFooter .row .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pcFooter .row .left img {
+    height: 4rem;
+  }
+  .pcFooter .row .left .div {
+    display: flex;
+  }
+  .pcFooter .row .left .div img {
+    height: 1rem;
+    padding-top: 7px;
+  }
+  .pcFooter .row .left .div .text {
+    width: 10rem;
+  }
+  .pcFooter .row .left .div .text p {
+    color: var(--primary-color);
+  }
+  .pcFooter .row .left .social {
+    width: 10rem;
+    display: flex;
+    gap: 7px;
+  }
+  .pcFooter .row .left .social img {
+    height: 1.5rem;
+  }
+  .pcFooter .row .center .text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .pcNavbar .container .right {
+    width: 45%;
+  }
+  .pcNavbar .container .right .links {
+    gap: 20px;
+  }
+  .banner .left {
+    height: 70vh;
+    align-content: center;
+  }
+  .banner .left .text {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 68%;
+  }
+  .banner .left .link .text {
+    display: flex;
+    align-items: center;
+  }
+  .banner .right {
+    height: 70vh;
+    display: flex;
+    gap: 5px;
+  }
+  .banner .right img {
+    height: 50vh;
+  }
+  .banner .right .image1 {
+    margin-top: 20vh;
+  }
+  .about .left {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .about .left .text {
+    letter-spacing: 1px;
+    width: 75%;
+    font-size: 18px;
+  }
+  .about .left .images {
+    display: flex;
+    width: 75%;
+  }
+  .about .left .images img {
+    height: 17rem;
+  }
+  .about .left .images .image1 {
+    margin-top: 4rem;
+  }
+  .about .right .image {
+    background: dimgray;
+    background-image: url("../image/image 7.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 22rem;
+    width: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .right .image img {
+    height: 2rem;
+  }
+  .about .right .text {
+    letter-spacing: 1px;
+    width: 75%;
+    font-size: 18px;
+  }
+  .about .right .btn {
+    background: #80228C;
+    width: 8rem;
+    border-radius: 0;
+  }
+  .about .right .btn a {
+    text-decoration: none;
+    color: var(--primary-color);
+    background: transparent;
+  }
+  .services .below {
+    margin-left: 5rem;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .services .below .box {
+    width: 20rem;
+    height: 31rem;
+  }
+  .services .below .center ol li {
+    font-size: 18px;
+  }
+  .services .below .center .head p {
+    font-size: 18px;
+  }
+  .services .below .center .cancel {
+    width: 100%;
+    margin-bottom: -48px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    background: transparent;
+  }
+  .services .below .center .cancel img {
+    background: transparent;
+  }
+  .testimonials .container .row p {
+    font-size: 18px;
+  }
+  .testimonials .container .row img {
+    margin-bottom: 1rem;
+  }
+  .testimonials .container .row .left .testimony {
+    padding-top: 3rem;
+    margin-left: 8rem;
+  }
+  .testimonials .container .row .left .testimony img {
+    height: 27rem;
+  }
+  .testimonials .container .row .left .testimony .text {
+    width: 66%;
+  }
+  .testimonials .container .row .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials .container .row .right .inRight {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .testimonials .container .row .right .inRight img {
+    height: 25rem;
+    width: 30rem;
+  }
+  .testimonials .container .row .right .inRight .text {
+    width: 75%;
+  }
+  .instagram .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .instagram .gallery h4 {
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+  }
+  .instagram .gallery .images img {
+    width: 9rem;
+  }
+  .instagram .gallery .images .hide {
+    display: block;
+  }
+  .instagram .gallery .images .low {
+    margin-top: 6rem;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .pcNavbar .container .right {
+    width: 50%;
+    justify-content: space-around;
+  }
+  .pcNavbar .container .right .links {
+    gap: 2rem;
+  }
+}
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=style.css.map */
